@@ -1,0 +1,66 @@
+body { 
+	font-family: Times New Roman;
+	font-size: 11pt;
+	margin-top: 2em;
+	margin-left: 2em;
+	margin-bottom: 2em;
+ }
+
+
+  dd { 
+ 	display: block;
+ 	margin-top: 1em;
+ 	margin-bottom:1em;
+ 	margin-left:0px;
+
+  }
+
+ a { 
+ 	color: #438D80;
+ 	text-decoration: none !important;
+ }
+
+ a:hover {
+	position: relative;
+  	left: 2px;
+ }
+
+a:hover, 
+a:visited, 
+a:link, {
+  color: black !important;
+  text-decoration: none !important; 
+}
+
+d {
+	 color: #438D80;
+}
+
+.container { 
+	max-width: 450px;
+ }
+
+  .responsive {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+ h1 {
+ 	font-size:24pt;
+ 	/*color: #438D80;*/
+ 	font-weight: normal;
+ 
+ }
+
+dt {
+
+	font-weight:bold;
+	/*color: #8C4351;*/
+}
+
+ 
+
+
+
+
