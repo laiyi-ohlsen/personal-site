@@ -1,0 +1,20 @@
+
+<a style="color:black" href="../index.html#projects"> ← Back </a>	
+<h1>{{title}}</h1>
+	<dl>
+		{{#each sections}} 
+			<dt> {{this.title}} </dt>
+			<dd> {{{this.description}}}</dd>
+		{{/each}}
+		{{#each photos}}
+			{{#if @last}} 
+				<a href="#" class="image-link" data-url="{{{this.link}}}">
+					{{this.name}}
+				</a>
+			{{else}}
+				<a href="#" class="image-link" data-url="{{{this.link}}}">
+					{{this.name}}
+				</a>,
+			{{/if}}
+		{{/each}}
+	</dl>

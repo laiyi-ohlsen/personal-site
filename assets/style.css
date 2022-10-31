@@ -7,6 +7,7 @@ body {
  }
 
 
+
   dd { 
  	display: block;
  	margin-top: 1em;
@@ -40,16 +41,30 @@ d {
 	max-width: 450px;
  }
 
+
+@media screen and (min-width: 1320px) {
+  .responsive {
+  width: 100%;
+  max-width: 700px;
+  max-height: auto; 
+  position: absolute;
+  top: 10%;
+  right: 10%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
   .responsive {
   width: 100%;
   max-width: 500px;
   height: auto;
+	}
 }
+
 
  h1 {
  	font-size:24pt;
  	font-weight: normal;
- 
  }
 
 dt {
@@ -57,7 +72,4 @@ dt {
 }
 
  
-
-
-
 
