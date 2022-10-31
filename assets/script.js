@@ -76,7 +76,7 @@ var _qlmQ = {
 		}], 
 		photos: [{
 			name: '[01]',
-			link: '../images/qlmq.jpg'
+			link: '../images/qlmQ.jpg'
 		}]
 };
 
