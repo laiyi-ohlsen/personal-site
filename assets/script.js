@@ -145,8 +145,12 @@ var _theInternet= {
 		}], 
 		photos: [{
 			name: '[01]',
-			link: '../images/internet_1.jpeg'}
-				]
+			link: '../images/internet_1.jpeg'},{
+			name: '[02]',
+			link: '../images/internet_2.jpg'}
+			]
+			
+			
 };
 
 /*----------TEMPLATES-------------*/
