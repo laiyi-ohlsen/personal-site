@@ -1,0 +1,75 @@
+body { 
+	font-family: Times New Roman;
+	font-size: 11pt;
+	margin-top: 2em;
+	margin-left: 1.5em;
+	margin-bottom: 2em;
+ }
+
+
+
+  dd { 
+ 	display: block;
+ 	margin-top: 1em;
+ 	margin-bottom:1em;
+ 	margin-left:0px;
+
+  }
+
+ a { 
+ 	color: #438D80;
+ 	text-decoration: none !important;
+ }
+
+ a:hover {
+	position: relative;
+  	left: 2px;
+ }
+
+a:hover, 
+a:visited, 
+a:link, {
+  color: black !important;
+  text-decoration: none !important; 
+}
+
+d {
+	 color: #438D80;
+}
+
+.container { 
+	max-width: 450px;
+ }
+
+
+@media screen and (min-width: 1320px) {
+  .responsive {
+  width: 100%;
+  max-width: 700px;
+  max-height: auto; 
+  position: absolute;
+  top: 10%;
+  right: 10%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+  .responsive {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+	}
+}
+
+
+ h1 {
+ 	font-size:24pt;
+ 	font-weight: normal;
+ }
+
+dt {
+	font-weight:bold;
+}
+
+ 
+
