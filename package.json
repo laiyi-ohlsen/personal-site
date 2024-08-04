@@ -1,0 +1,24 @@
+{
+  "name": "8.0_eleventy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "start": "npx @11ty/eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-img": "^4.0.2"
+  },
+  "dependencies": {
+    "eleventy-plugin-clean": "^1.2.6",
+    "lodash": "^4.17.21",
+    "nunjucks": "^3.2.4",
+    "sharp": "^0.33.3"
+  }
+}
