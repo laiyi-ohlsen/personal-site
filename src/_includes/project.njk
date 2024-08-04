@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class="content">
+            <a style="color: black !important" href ={{ site.url }}/{{type  | slugify}}>← Back</a>
+                <h1>{{ title}}</h1>
+              <!-- <div class = "info">-->
+                {{ content | safe }}
+              <!-- </div>-->
+        </div>
+    </div>
+</body>
+</html>
+
+         <!--<h2>{{ type | title}}</h2>-->
+             <!--{% include "_nav.njk" %}-->
