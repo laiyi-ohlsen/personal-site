@@ -1,5 +1,5 @@
 {
-  "name": "8.0_eleventy",
+  "name": "personal-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,9 +19,10 @@
   },
   "dependencies": {
     "ci": "^2.3.0",
+    "eleventy": "^1.0.7",
     "eleventy-plugin-clean": "^1.2.6",
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.4",
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.4"
   }
 }
