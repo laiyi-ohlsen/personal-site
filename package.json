@@ -21,6 +21,8 @@
     "ci": "^2.3.0",
     "eleventy": "^1.0.7",
     "eleventy-plugin-clean": "^1.2.6",
+    "jquery": "^3.7.1",
+    "lightbox2": "^2.11.5",
     "lodash": "^4.17.21",
     "nunjucks": "^3.2.4",
     "sharp": "^0.33.4"

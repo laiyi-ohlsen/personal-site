@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class="content">
+            {% include "_header.njk" %}
+              
+              {% set sortedProjects = collections.art | sort(attribute='data.year', reverse=true) %}
+              {% for x in sortedProjects %}
+              <div class="project-item">
+              {% if x.data.photo %}
+              <a href="{{ x.url }}">
+                <img src="{{ x.data.photo }}" alt="{{ x.data.title }}" />
+              </a>
+              {% endif %}
+              <div class="project-title">{{ x.data.title }} ({{x.data.year}})</div><br>
+              </div>
+            {% endfor %}
+            </div>
+    </div>
+</body>
+</html>

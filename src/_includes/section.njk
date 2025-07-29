@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/style.css">
+   <link href="/vendor/lightbox2/css/lightbox.min.css" rel="stylesheet">
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/lightbox2/js/lightbox.min.js"></script>
+   
 </head>
 <body>
     <div class = "container">
         <div class="content">
-            <a style="color: black !important"  href ={{ site.url }}/>← Back</a>
-            <h1> {{ title }}</h1>
-            {% include "_nav.njk" %}
-    
-        {{ content | safe}}
+            {% include "_header.njk" %}
+            {% block content %}{{ content | safe }}{% endblock %}
         </div>
+        
     </div>
 </body>
 </html>

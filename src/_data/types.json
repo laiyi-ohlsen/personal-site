@@ -1,12 +1,9 @@
 [
-   "mesasurement_lab",
-   "internet_index",
-   "parsons",
-   "guest_lectures",
-   "writing", 
-   "video", 
-   "performance", 
-   "workshop",
-   "printed_matter", 
-   "drawing"
+  "resume",
+  "teaching",
+  "creative",
+  "writing",
+  "blog", 
+  "talks",
+  "contact"
 ]

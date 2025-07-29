@@ -1,11 +1,11 @@
 ---
 layout: section.njk
 title: Writing
-type: writing
+type: writing 
 permalink: "{{ type | slugify }}/index.html"
 ---
 
-### Essay
+## Essay
 
 * ‣   [How Tall Is the Internet?](https://www.e-flux.com/architecture/spatial-computing/602471/how-tall-is-the-internet/) \
 2024-06-26 | e-flux Architecture Spatial Computing Series 
@@ -16,7 +16,7 @@ permalink: "{{ type | slugify }}/index.html"
 * ‣ Chinatown [(recording)](https://www.patreon.com/posts/lai-yi-ohlsen-is-36493511), [(print)](https://www.benjaminakio.com/work/tiger-hands-publication)\
 2020-04-28 | Montez Press Radio 
 
-### Interview
+## Interview
 
 *  ‣ [Choreography of Circulation](https://pioneerworks.org/broadcast/lai-yi-ohlsen-marguerite-hemmings-choreography-of-circulatio) \
 2020-12-07 | Pioneer Works Broadcast

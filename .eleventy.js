@@ -2,6 +2,7 @@ const lodash = require("lodash");
 const clean = require("eleventy-plugin-clean");
 const Image = require("@11ty/eleventy-img")
 const path = require('path')  
+const slugify = require("slugify");
 
 module.exports = function(eleventyConfig) {
   	// --- START, eleventy-img
@@ -20,10 +21,6 @@ module.exports = function(eleventyConfig) {
 			}
 		}
 
-
-    
-   
-
 		// generate images
 		Image(src, options)
 
@@ -40,8 +37,6 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addShortcode("image", imageShortcode)
 	// --- END, eleventy-img
 
-
-
     // CSS 
     eleventyConfig.addPassthroughCopy("./src/style.css");
 
@@ -53,7 +48,6 @@ module.exports = function(eleventyConfig) {
 
     // clean types
     eleventyConfig.addFilter("include", (arr, path, value) => {
-
         value = lodash.deburr(value).toLowerCase();
         
         return arr.filter((item) => {
@@ -61,9 +55,10 @@ module.exports = function(eleventyConfig) {
           pathValue = lodash.deburr(pathValue).toLowerCase();
           return pathValue.includes(value);
         });
-    
-      });
+    });
 
+    // slug filter
+    eleventyConfig.addNunjucksFilter("slug", str => slugify(str, { lower: true, strict: true }));
     
     return {
         dir: {
