@@ -42,6 +42,14 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("./src/assets");
 
+    // Vendor files
+    eleventyConfig.addPassthroughCopy({
+        "./node_modules/lightbox2/dist": "vendor/lightbox2"
+    });
+    eleventyConfig.addPassthroughCopy({
+        "./node_modules/jquery/dist": "vendor/jquery"
+    });
+
     // clean up plugin
     eleventyConfig.addPlugin(clean);
     // clean.updateFileRecord(outputPath)
