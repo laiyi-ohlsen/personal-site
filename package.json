@@ -8,6 +8,7 @@
     "build:eleventy:prod": "ELEVENTY_ENV=production eleventy",
     "build:prod": "npm run build:eleventy:prod",
     "start": "npx @11ty/eleventy --serve",
+    "start:local": "URL=http://localhost:8080 npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

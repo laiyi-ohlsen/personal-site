@@ -1,6 +1,10 @@
+/* Add this to your HTML <head> for Google Fonts:
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+*/
+
 /* ========== Base Styles ========== */
 body { 
-  font-family: "Times New Roman", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 11pt;
   margin-top: 2em;
   margin-left: 1.5em;
@@ -18,7 +22,7 @@ body {
 
 /* ========== Links ========== */
 a { 
-  color: #438D80;
+  color: #745E96;
   text-decoration: none !important;
 }
 
@@ -30,7 +34,7 @@ a:hover {
 a:hover, 
 a:visited, 
 a:link {
-  color: #438D80 !important;
+  color: #745E96 !important;
   text-decoration: none !important; 
 }
 
@@ -49,7 +53,7 @@ h2 {
 }
 
 h3 {
-  color: #438D80;
+  color: #745E96;
 }
 
 h4 {
