@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+    {% if photos %}
+      <div class="project-photos">
+        {% for photo in photos %}
+          <a href="{{ photo.src }}" data-lightbox="project-gallery">
+            {% galleryImage photo.src, photo.alt or title %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+{% endblock %}

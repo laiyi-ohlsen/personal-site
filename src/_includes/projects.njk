@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+{% block content %}
+    {% set sortedProjects = collections.art | sort(attribute='data.year', reverse=true) %}
+    {% for x in sortedProjects %}
+      <div class="project-item">
+        {% if x.data.photo %}
+        <a href="{{ x.url }}">
+          {% galleryImage x.data.photo, x.data.title %}
+        </a>
+        {% endif %}
+        <div class="project-title">{{ x.data.title }} ({{ x.data.year }})</div><br>
+      </div>
+    {% endfor %}
+{% endblock %}

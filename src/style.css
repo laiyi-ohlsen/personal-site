@@ -1,0 +1,110 @@
+/* Add this to your HTML <head> for Google Fonts:
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700&display=swap" rel="stylesheet">
+*/
+
+/* ========== Base Styles ========== */
+body { 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  margin-top: 2em;
+  margin-left: 1.5em;
+  margin-bottom: 2em;
+}
+
+/* ========== Layout Containers ========== */
+.container, .content { 
+  max-width: 450px;
+}
+
+.info {
+  padding-top: 20px; 
+}
+
+/* ========== Links ========== */
+a { 
+  color: #745E96;
+  text-decoration: none !important;
+}
+
+a:hover {
+  position: relative;
+  left: 2px;
+}
+
+a:hover, 
+a:visited, 
+a:link {
+  color: #745E96 !important;
+  text-decoration: none !important; 
+}
+
+/* ========== Typography ========== */
+h1 {
+  font-size: 24pt; 
+  font-weight: normal;
+}
+
+h1 .site-title-link {
+  color: black !important;
+  text-decoration: none !important;
+}
+h2 {
+  font-weight:bold;
+}
+
+h3 {
+  color: #745E96;
+}
+
+h4 {
+  text-decoration: none;
+  color: black;
+}
+
+ul, ol {
+  margin-left: 0;
+  padding-left: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+li { 
+  list-style-type: none;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* ========== Project Images ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2em auto 1em auto;
+  padding-left: 0;
+}
+
+/* Left-align iframes (videos) inside content */
+.content iframe {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  float: left;
+  text-align: left;
+  max-width: 100%;
+  /* Remove centering and all vertical space */
+}
+
+/* Remove white border from Lightbox2 popup images */
+.lightbox-image, .lb-image {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+
+
