@@ -38,6 +38,11 @@ a:link {
   text-decoration: none !important; 
 }
 
+/* ========== Navigation ========== */
+nav a.active {
+  font-weight: bold;
+}
+
 /* ========== Typography ========== */
 h1 {
   font-size: 24pt; 
@@ -76,19 +81,13 @@ li {
   padding-left: 0;
 }
 
-img {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  margin-left: 0;
-  padding-left: 0;
-}
-
 /* ========== Project Images ========== */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 2em auto 1em auto;
+  padding-left: 0;
 }
 
 /* Left-align iframes (videos) inside content */

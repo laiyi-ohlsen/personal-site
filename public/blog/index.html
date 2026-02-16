@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="/style.css">
-   <link href="/vendor/lightbox2/css/lightbox.min.css" rel="stylesheet">
-<script src="/vendor/jquery/jquery.min.js"></script>
-<script src="/vendor/lightbox2/js/lightbox.min.js"></script>
-   
+    <link href="/vendor/lightbox2/css/lightbox.min.css" rel="stylesheet">
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/lightbox2/js/lightbox.min.js"></script>
 </head>
 <body>
-    <div class = "container">
+    <div class="container">
         <div class="content">
-            <h1><a href="http://localhost:8080" class="site-title-link">.𖥔 ݁ ˖   ✦    ‧₊˚ ⋅ Lai Yi Ohlsen </a></h1>
- <a href="http://localhost:8080/resume">Resume</a> ⟡
-<a href="http://localhost:8080/teaching">Teaching</a> ⟡
-<a href="http://localhost:8080/creative">Creative</a> ⟡
-<a href="http://localhost:8080/writing">Writing</a> ⟡
-<a href="http://localhost:8080/talks">Talks</a> ⟡
-<a href="http://localhost:8080/contact">Contact</a>  
+            <h1><a href="/" class="site-title-link">.𖥔 ݁ ˖   ✦    ‧₊˚ ⋅ Lai Yi Ohlsen </a></h1>
+<nav>
+ <a href="/resume" >Resume</a> ⟡
+<a href="/teaching" >Teaching</a> ⟡
+<a href="/creative" >Creative</a> ⟡
+<a href="/writing" >Writing</a> ⟡
+<a href="/talks" >Talks</a> ⟡
+<a href="https://blog.laiyiohlsen.com">Blog </a> ⟡
+<a href="/contact" >Contact</a> ⟡
+
+</nav>  
 
             
         </div>
-        
     </div>
+    <script>
+    document.querySelectorAll('img:not([loading])').forEach(function(img) {
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('decoding', 'async');
+    });
+    </script>
 </body>
 </html>
