@@ -22,7 +22,7 @@ body {
 
 /* ========== Links ========== */
 a { 
-  color: #364138;
+  color: #2E6F40;
   text-decoration: none !important;
 }
 
@@ -34,13 +34,19 @@ a:hover {
 a:hover, 
 a:visited, 
 a:link {
-  color: #364138 !important;
+  color: #2E6F40 !important;
   text-decoration: none !important; 
 }
 
 /* ========== Navigation ========== */
 nav a.active {
   font-weight: bold;
+}
+
+/* ========== Back Link ========== */
+.back-link-container {
+  display: block;
+  margin-top: 1.5em;
 }
 
 /* ========== Typography ========== */
@@ -58,7 +64,7 @@ h2 {
 }
 
 h3 {
-  color: #364138;
+  color: #2E6F40;
 }
 
 h4 {

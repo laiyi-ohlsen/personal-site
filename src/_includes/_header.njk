@@ -2,7 +2,7 @@
 <nav>
  <a href="/resume" {% if page.url == "/resume/" %}class="active"{% endif %}>Resume</a> ⟡
 <a href="/teaching" {% if page.url == "/teaching/" %}class="active"{% endif %}>Teaching</a> ⟡
-<a href="/creative" {% if page.url == "/creative/" %}class="active"{% endif %}>Creative</a> ⟡
+<a href="/creative" {% if page.url == "/creative/" or layout == "project.njk" %}class="active"{% endif %}>Creative</a> ⟡
 <a href="/writing" {% if page.url == "/writing/" %}class="active"{% endif %}>Writing</a> ⟡
 <a href="/talks" {% if page.url == "/talks/" %}class="active"{% endif %}>Talks</a> ⟡
 <a href="https://blog.laiyiohlsen.com">Blog </a> ⟡
