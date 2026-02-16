@@ -22,7 +22,7 @@ body {
 
 /* ========== Links ========== */
 a { 
-  color: #745E96;
+  color: #364138;
   text-decoration: none !important;
 }
 
@@ -34,7 +34,7 @@ a:hover {
 a:hover, 
 a:visited, 
 a:link {
-  color: #745E96 !important;
+  color: #364138 !important;
   text-decoration: none !important; 
 }
 
@@ -58,7 +58,7 @@ h2 {
 }
 
 h3 {
-  color: #745E96;
+  color: #364138;
 }
 
 h4 {
