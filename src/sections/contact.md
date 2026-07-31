@@ -7,4 +7,4 @@ permalink: "{{ type | slugify }}/index.html"
 
 **e-mail:** laiyi.ohlsen@gmail.com\
 **newsletter:** [here](https://airtable.com/appvV8MMrAV8cSgcy/pagoUTkELI4yZAiz1/form)\
-**last updated:** 2025-08-17
+**last updated:** 2026-07-31
