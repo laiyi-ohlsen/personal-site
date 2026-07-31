@@ -3,14 +3,14 @@ layout: project.njk
 tags: art
 type: project
 title: 100 Scores
-photo: "/assets/images/100_scores_1.jpg"
+photo: "/assets/images/100_scores/100_scores_1.jpg"
 permalink: "{{ title | slugify }}/index.html"
 photos:
-  - src: "/assets/images/100_scores_1.jpg"
+  - src: "/assets/images/100_scores/100_scores_1.jpg"
     alt: "100 Scores 1"
-  - src: "/assets/images/100_scores_2.jpg"
+  - src: "/assets/images/100_scores/100_scores_2.jpg"
     alt: "100 Scores 2"
-  - src: "/assets/images/100_scores_3.jpg"
+  - src: "/assets/images/100_scores/100_scores_3.jpg"
     alt: "100 Scores 3"
 year: 2018
 ---

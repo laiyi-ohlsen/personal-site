@@ -5,9 +5,9 @@ type: printed_matter
 title: qlmQ
 permalink: "{{ title | slugify }}/index.html"
 photos:
-  - src: "/assets/images/qlmQ.jpg"
+  - src: "/assets/images/qlmQ/qlmQ.jpg"
     alt: "qlmQ"
-photo: "/assets/images/qlmQ.jpg"
+photo: "/assets/images/qlmQ/qlmQ.jpg"
 year: 2018
 ---
 

@@ -4,11 +4,11 @@ tags: art
 type: drawing
 title: '"The Internet"'
 permalink: "drawing/{{ title | slugify }}/index.html"
-photo: "/assets/images/internet_1.jpeg"
+photo: "/assets/images/internet/internet_1.jpeg"
 photos:
-  - src: "/assets/images/internet_1.jpeg"
+  - src: "/assets/images/internet/internet_1.jpeg"
     alt: "The Internet 1"
-  - src: "/assets/images/internet_2.jpg"
+  - src: "/assets/images/internet/internet_2.jpg"
     alt: "The Internet 2"
 year: 2022
 ---

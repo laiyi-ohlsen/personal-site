@@ -4,13 +4,13 @@ tags: art
 type: drawing
 title: Time Sequence Choreographies For a Room
 permalink: "drawing/{{ title | slugify }}/index.html"
-photo: "/assets/images/time-sequence_1.jpg"
+photo: "/assets/images/time-sequence/time-sequence_1.jpg"
 photos:
-  - src: "/assets/images/time-sequence_1.jpg"
+  - src: "/assets/images/time-sequence/time-sequence_1.jpg"
     alt: "Time Sequence 1"
-  - src: "/assets/images/time-sequence_2.jpg"
+  - src: "/assets/images/time-sequence/time-sequence_2.jpg"
     alt: "Time Sequence 2"
-  - src: "/assets/images/time-sequence_3.jpg"
+  - src: "/assets/images/time-sequence/time-sequence_3.jpg"
     alt: "Time Sequence 3"
 year: 2019
 ---

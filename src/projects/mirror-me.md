@@ -4,7 +4,7 @@ tags: art
 type: performance
 title: Mirror Me
 permalink: "{{ title | slugify }}/index.html"
-photo: "/assets/images/mirrorme.png"
+photo: "/assets/images/mirrorme/mirrorme.png"
 year: 2018
 ---
 Work-in-progress showing at St. Marks Church on November 29, 2018 as part of Movement Research Fall Festival 2018

@@ -4,7 +4,7 @@ tags: art
 type: video
 title: Choreography of Circulation
 permalink: "{{ title | slugify }}/index.html"
-photo: "/assets/images/cofc.jpg"
+photo: "/assets/images/cofc/cofc.jpg"
 year: 2019
 ---
 

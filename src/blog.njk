@@ -1,0 +1,20 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/index.html
+---
+
+<div class="post-listing">
+{% set posts = collections.post | reverse %}
+{% for post in posts %}
+<a href="{{ post.url }}" class="post-preview">
+  {% if post.data.thumbnail %}
+  <img class="post-thumbnail" src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+  {% endif %}
+  <div class="post-info">
+    <span class="post-title">{{ post.data.title }}</span>
+    <span class="post-date">{{ post.date | dateISO }}</span>
+  </div>
+</a>
+{% endfor %}
+</div>

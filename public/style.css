@@ -96,6 +96,15 @@ img {
   padding-left: 0;
 }
 
+/* ========== Image Captions ========== */
+.caption {
+  display: block;
+  text-align: center;
+  font-size: 0.85em;
+  color: #999;
+  margin-bottom: 1.5em;
+}
+
 /* Left-align iframes (videos) inside content */
 .content iframe {
   display: block;
@@ -115,6 +124,93 @@ img {
   border: none !important;
   box-shadow: none !important;
   background: none !important;
+}
+
+/* ========== Blog Post Styles ========== */
+.post-listing {
+  margin-top: 3em;
+}
+
+.post-preview {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  text-decoration: none !important;
+}
+
+.post-thumbnail {
+  width: 160px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  color: #2E6F40;
+}
+
+.post-date {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9em;
+  margin-top: 0.2em;
+}
+
+.post-list li {
+  margin-bottom: 1.5em;
+}
+
+/* ========== Post Image Carousel ========== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1.5em;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 0.3em;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 0 0.3em;
+  line-height: 1;
+  color: #999;
+}
+
+.carousel-btn:hover {
+  color: #333;
+}
+
+.carousel-counter {
+  font-size: 0.85em;
+  color: #999;
 }
 
 

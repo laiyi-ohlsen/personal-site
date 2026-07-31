@@ -4,13 +4,13 @@ tags: art
 type: workshop
 title: Database as a Relational Practice
 permalink: "{{ title | slugify }}/index.html"
-photo: "/assets/images/database_1.jpeg"
+photo: "/assets/images/database/database_1.jpeg"
 photos:
-  - src: "/assets/images/database_1.jpeg"
+  - src: "/assets/images/database/database_1.jpeg"
     alt: "Database Scan 1"
-  - src: "/assets/images/database_2.jpeg"
+  - src: "/assets/images/database/database_2.jpeg"
     alt: "Database Scan 2"
-  - src: "/assets/images/database_3.jpeg"
+  - src: "/assets/images/database/database_3.jpeg"
     alt: "Database Scan 3"
 year: 2018
 ---

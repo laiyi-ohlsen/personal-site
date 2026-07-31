@@ -1,0 +1,48 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<div class="back-link-container">
+<a href="/blog/" class="back-link">← back</a>
+</div>
+<h2>{{ title }}</h2>
+{% set images = content | extractImages %}
+{% if images.length > 0 %}
+<div class="carousel" data-carousel>
+  <div class="carousel-track">
+    {% for img in images %}
+    <img src="{{ img }}" alt="">
+    {% endfor %}
+  </div>
+  {% if images.length > 1 %}
+  <div class="carousel-nav">
+    <button class="carousel-btn prev" data-prev>&#8249;</button>
+    <span class="carousel-counter"><span data-current>1</span> / {{ images.length }}</span>
+    <button class="carousel-btn next" data-next>&#8250;</button>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{{ content | removeImages | safe }}
+<script>
+document.querySelectorAll('[data-carousel]').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const images = track.querySelectorAll('img');
+  const prevBtn = carousel.querySelector('[data-prev]');
+  const nextBtn = carousel.querySelector('[data-next]');
+  const counter = carousel.querySelector('[data-current]');
+  let index = 0;
+  function update() {
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    if (counter) counter.textContent = index + 1;
+  }
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    index = (index - 1 + images.length) % images.length;
+    update();
+  });
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    index = (index + 1) % images.length;
+    update();
+  });
+});
+</script>
+{% endblock %}

@@ -4,11 +4,11 @@ tags: art
 type: workshop
 title: "while(x): How to Write a Code Poem"
 permalink: "{{ title | slugify }}/index.html"
-photo: "/assets/images/while-x_1.jpeg"
+photo: "/assets/images/while-x/while-x_1.jpeg"
 photos:
-  - src: "/assets/images/while-x_1.jpeg"
+  - src: "/assets/images/while-x/while-x_1.jpeg"
     alt: "while-x 1"
-  - src: "/assets/images/while-x_2.png"
+  - src: "/assets/images/while-x/while-x_2.png"
     alt: "while-x 2"
 year: 2018
 ---

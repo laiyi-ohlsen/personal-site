@@ -4,7 +4,7 @@ tags:
 type: performance
 title: Untitled
 permalink: "{{type}}/{{ title | slugify }}/index.html"
-photo: "/assets/images/100_scores_1.jpg"
+photo: "/assets/images/100_scores/100_scores_1.jpg"
 ---
 
 * Work-in-progress showing at Judson Church on  March 28, 2022
