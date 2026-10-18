@@ -7,6 +7,9 @@ permalink: "{{ type | slugify }}/index.html"
 
 ## Essay
 
+* ⪼   [What is the Splinternet?](https://internetindex.substack.com/p/what-is-the-splinternet) \
+2026-04-11 | Internet Index
+
 * ⪼   [How Tall Is the Internet?](https://www.e-flux.com/architecture/spatial-computing/602471/how-tall-is-the-internet/) \
 2024-06-26 | e-flux Architecture Spatial Computing Series 
 
@@ -18,5 +21,11 @@ permalink: "{{ type | slugify }}/index.html"
 
 ## Interview
 
-*  ⪼ [Choreography of Circulation](https://pioneerworks.org/broadcast/lai-yi-ohlsen-marguerite-hemmings-choreography-of-circulatio) \
+*  ⪼ [Vint Cerf](https://internetindex.substack.com/p/interview-vint-cerf) \
+2026-05-05 | Internet Index
+
+
+
+
+*  ⪼ [Marguerite Hemmings](https://pioneerworks.org/broadcast/lai-yi-ohlsen-marguerite-hemmings-choreography-of-circulation) \
 2020-12-07 | Pioneer Works Broadcast
