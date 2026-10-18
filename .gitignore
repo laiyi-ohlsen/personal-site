@@ -2,3 +2,5 @@
 node_modules/
 public/
 .plugin-clean/
+src/assets/videos/
+public/assets/videos/
