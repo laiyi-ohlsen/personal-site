@@ -5,7 +5,7 @@ type: Resume
 permalink: "{{ type | slugify }}/index.html"
 ---
 
-This is a semi-complete list of things I do and have done. Feel free to reach out if you'd like the full list. 
+This is a semi-complete list of things I do and have done.
 
 ### Jobs
 * ⪼ Head of Cloudflare Radar  \
