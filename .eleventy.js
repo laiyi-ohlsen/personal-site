@@ -1,4 +1,5 @@
 const lodash = require("lodash");
+const markdownIt = require("markdown-it");
 const clean = require("eleventy-plugin-clean");
 const Image = require("@11ty/eleventy-img")
 const path = require('path')  
@@ -73,6 +74,20 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.addPassthroughCopy({
         "./node_modules/jquery/dist": "vendor/jquery"
+    });
+
+    // Render markdown from front matter fields (e.g. description, info)
+    const md = markdownIt({ html: true, linkify: true });
+    eleventyConfig.addFilter("markdown", (content) => {
+        return md.render(content || "");
+    });
+
+    // Sort projects by year (newest first), then by optional `order` field
+    eleventyConfig.addFilter("sortProjects", (projects) => {
+        return [...projects].sort((a, b) =>
+            (b.data.year - a.data.year) || ((a.data.order || 0) - (b.data.order || 0)) ||
+            a.data.title.localeCompare(b.data.title)
+        );
     });
 
     // Blog filters

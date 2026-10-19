@@ -1,0 +1,157 @@
+    {% set sortedProjects = collections.art | sortProjects %}
+    {% set mediums = [] %}
+    {% for x in sortedProjects %}
+      {% for m in x.data.medium %}
+        {% if m not in mediums %}
+          {% set mediums = (mediums.push(m), mediums) %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+    <div class="medium-filter">
+      {% for m in mediums | sort %}
+        <label><input type="checkbox" value="{{ m }}"> {{ m }}</label>
+      {% endfor %}
+    </div>
+    {% for x in sortedProjects %}
+      <div class="project-item" data-mediums="{{ x.data.medium | join(',') }}">
+        {% if x.data.photo %}
+        <a href="{{ x.url }}" data-detail="detail-{{ x.data.title | slugify }}">
+          {% galleryImage x.data.photo, x.data.title %}
+        </a>
+        {% endif %}
+        <div class="project-title">{{ x.data.title }} ({{ x.data.year }})</div><br>
+      </div>
+      <div class="project-detail" id="detail-{{ x.data.title | slugify }}" data-url="{{ x.url }}" data-title="{{ x.data.title }}"{% if x.url != openUrl %} hidden{% endif %}>
+        <div class="detail-left">
+          {% set detailPhotos = [] %}
+          {% for photo in x.data.photos %}
+            {% if photo.src != x.data.photo %}
+              {% set detailPhotos = (detailPhotos.push(photo), detailPhotos) %}
+            {% endif %}
+          {% endfor %}
+          {% if x.data.photo %}
+            {% set detailPhotos = (detailPhotos.push({ src: x.data.photo, alt: x.data.title }), detailPhotos) %}
+          {% endif %}
+          {% if detailPhotos.length > 0 and x.data.carousel !== false %}
+          <div class="carousel" data-carousel>
+            <div class="carousel-track">
+              {% for photo in detailPhotos %}
+              <a href="{{ photo.src }}" data-lightbox="{{ x.data.title | slugify }}">
+                <img src="{{ photo.src }}" alt="{{ photo.alt or x.data.title }}">
+              </a>
+              {% endfor %}
+            </div>
+            {% if detailPhotos.length > 1 %}
+            <div class="carousel-nav">
+              <button class="carousel-btn prev" data-prev>&#8249;</button>
+              <span class="carousel-counter"><span data-current>1</span> / {{ detailPhotos.length }}</span>
+              <button class="carousel-btn next" data-next>&#8250;</button>
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
+          {% if x.data.info %}
+          <div class="detail-meta">
+            {{ x.data.info | markdown | safe }}
+          </div>
+          {% endif %}
+        </div>
+        <div class="detail-right">
+          <div class="detail-title-row">
+            <h2>{{ x.data.title }} ({{ x.data.year }})</h2>
+            <button class="detail-close" data-close>&times;</button>
+          </div>
+          {% if x.data.description %}
+          {{ x.data.description | markdown | safe }}
+          {% else %}
+          {{ x.templateContent | removeImages | safe }}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+    <script>
+    (function () {
+      var boxes = document.querySelectorAll('.medium-filter input[type="checkbox"]');
+      var items = document.querySelectorAll('.project-item');
+      function update() {
+        var checked = Array.from(boxes).filter(function (b) { return b.checked; }).map(function (b) { return b.value; });
+        items.forEach(function (item) {
+          var mediums = (item.dataset.mediums || '').split(',');
+          var show = checked.length === 0 || checked.some(function (m) { return mediums.indexOf(m) !== -1; });
+          item.style.display = show ? '' : 'none';
+        });
+      }
+      boxes.forEach(function (b) { b.addEventListener('change', update); });
+
+      // Inline project details; each panel has its own URL (the project's permalink)
+      var panels = document.querySelectorAll('.project-detail');
+      var artTitle = 'Art';
+      function showPanel(panel) {
+        panels.forEach(function (p) { p.hidden = p !== panel; });
+        if (!panel) {
+          document.title = artTitle;
+          return;
+        }
+        document.title = panel.dataset.title;
+        if (getComputedStyle(panel).position === 'static') {
+          // Narrow screens: panel sits below its image, so bring the image into view
+          panel.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          // Open at the current scroll position; the panel then scrolls with the page
+          panel.style.top = 'calc(' + window.scrollY + 'px + 2em)';
+        }
+      }
+      function panelForPath(path) {
+        return Array.from(panels).find(function (p) { return p.dataset.url === path; }) || null;
+      }
+      document.querySelectorAll('[data-detail]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          var panel = document.getElementById(link.dataset.detail);
+          if (panel.hidden) {
+            history.pushState(null, '', panel.dataset.url);
+            showPanel(panel);
+          } else {
+            history.pushState(null, '', '/art/');
+            showPanel(null);
+          }
+        });
+      });
+      document.querySelectorAll('[data-close]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          history.pushState(null, '', '/art/');
+          showPanel(null);
+        });
+      });
+      window.addEventListener('popstate', function () {
+        showPanel(panelForPath(location.pathname));
+      });
+      // Arriving at a project URL on a narrow screen: jump to that project
+      var initial = panelForPath(location.pathname);
+      if (initial && getComputedStyle(initial).position === 'static') {
+        initial.previousElementSibling.scrollIntoView({ block: 'start' });
+      }
+
+      // Carousels
+      document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+        var track = carousel.querySelector('.carousel-track');
+        var images = track.querySelectorAll('img');
+        var prevBtn = carousel.querySelector('[data-prev]');
+        var nextBtn = carousel.querySelector('[data-next]');
+        var counter = carousel.querySelector('[data-current]');
+        var index = 0;
+        function update() {
+          track.style.transform = 'translateX(-' + (index * 100) + '%)';
+          if (counter) counter.textContent = index + 1;
+        }
+        if (prevBtn) prevBtn.addEventListener('click', function () {
+          index = (index - 1 + images.length) % images.length;
+          update();
+        });
+        if (nextBtn) nextBtn.addEventListener('click', function () {
+          index = (index + 1) % images.length;
+          update();
+        });
+      });
+    })();
+    </script>

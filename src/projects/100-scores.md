@@ -2,6 +2,12 @@
 layout: project.njk
 tags: art
 type: project
+medium: [printed matter]
+description: "Improvisational movement scores based on computational algorithms, organized into four chapters (*000*, *001*, *010* and *100*) on Networks, Organization, Timing and Trust. Written to be danced, the scores use the body to translate computer theory into movement. From 2016 to 2017, they were performed with participants in five cities, building a repository of responses."
+info: |
+  Laser print on Vellum (8.5" x 5.5").
+  
+  Distributed at [New York Tech Zine Fair 2018](https://techzinefair.org/), [New York Art Book Fair 2018](http://nyartbookfair.com/), and the Creative Independent / [Are.na](https://www.are.na/) [How to Use the Internet Mindfully](https://thecreativeindependent.com/notes/arena-tci-how-do-you-use-the-internet-mindfully/) release. Presented as participatory performance in five cities, including Flee Immediately at Panke Gallery (Berlin) as part of Vorspiel; American University (Washington, D.C.); and Sediment Arts (Richmond, VA).
 title: 100 Scores
 photo: "/assets/images/100_scores/100_scores_1.jpg"
 permalink: "{{ title | slugify }}/index.html"
@@ -13,18 +19,5 @@ photos:
   - src: "/assets/images/100_scores/100_scores_3.jpg"
     alt: "100 Scores 3"
 year: 2018
+order: 4
 ---
-
-## 00 Questions
-
-*100 Scores: movement inspired by computers* is collection of improvisational movement scores based upon computational algorithms. *000*, *001*, *010*, and *100* each focus upon a different theme: Networks, Organization, Timing and Trust, respectively. The scores are written to be danced, using the physical medium to translate computer theory to the physical body.
-
-## 01 Publication
-
-*100 Scores* was distributed as a zine at [New York Tech Zine Fair 2018](https://techzinefair.org/), [New York Art Book Fair 2018](http://nyartbookfair.com/) and the Creative Independent / are.na [How to Use the Internet Mindfully](https://thecreativeindependent.com/notes/arena-tci-how-do-you-use-the-internet-mindfully/) release.
-
-## 02 Participatory
-
-From 2016-2017, 100 Scores was developed into a series of participatory performance of improvisational scores inspired by computers that have created a repository of responses. 100 Scores was presented in 5 cities including Berlin, Germany for Flee Immediately at Panke Gallery as part of Vorspiel, Washington, D.C. at American University and Richmond, VA at Sediment Arts.
-
-## 03 Photos

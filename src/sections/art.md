@@ -1,6 +1,6 @@
 ---
 layout: projects.njk
-title: Creative
-type: creative
+title: Art
+type: art
 permalink: "{{ type | slugify }}/index.html"
 ---

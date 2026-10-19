@@ -106,6 +106,98 @@ th:nth-child(2), td:nth-child(2) {
   min-width: 30em;
 }
 
+/* ========== Medium Filter ========== */
+.medium-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  margin: 1.5em 0;
+}
+
+.medium-filter label {
+  cursor: pointer;
+}
+
+.medium-filter input[type="checkbox"] {
+  margin-right: 0.4em;
+}
+
+/* ========== Inline Project Detail ========== */
+.project-detail[hidden] {
+  display: none;
+}
+
+.project-detail {
+  position: absolute;
+  top: 2em;
+  left: calc(1.5em + 450px);
+  right: 0;
+  width: min(600px, calc(100vw - 450px - 7.5em));
+  margin: 0 auto;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.project-detail .detail-left {
+  min-width: 0;
+}
+
+.project-detail .detail-right {
+  min-width: 0;
+  order: -1;
+}
+
+.project-detail .carousel {
+  margin-bottom: 0.5em;
+}
+
+.project-detail .carousel-track img {
+  margin: 0;
+}
+
+.detail-meta {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.detail-meta p {
+  margin: 0 0 0.5em;
+}
+.detail-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.detail-title-row h2 {
+  margin-top: 0;
+}
+
+.detail-close {
+  background: none;
+  border: none;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+}
+
+.detail-close:hover {
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .project-detail {
+    position: static;
+    width: auto;
+    max-width: none;
+    margin: 1.5em 0 2.5em 0;
+    padding-bottom: 0;
+  }
+}
+
 /* ========== Project Images ========== */
 video, img {
   max-width: 100%;
@@ -196,6 +288,12 @@ video, img {
 .carousel-track {
   display: flex;
   transition: transform 0.3s ease;
+}
+
+.carousel-track a {
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .carousel-track img {

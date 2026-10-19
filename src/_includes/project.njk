@@ -1,17 +1,5 @@
 {% extends "base.njk" %}
 {% block content %}
-<div class="back-link-container">
-<a href="/creative" class="back-link">← back</a>
-</div>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-    {% if photos %}
-      <div class="project-photos">
-        {% for photo in photos %}
-          <a href="{{ photo.src }}" data-lightbox="project-gallery">
-            {% galleryImage photo.src, photo.alt or title %}
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
+    {% set openUrl = page.url %}
+    {% include "_art-grid.njk" %}
 {% endblock %}
