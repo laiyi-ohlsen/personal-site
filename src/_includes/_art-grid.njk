@@ -50,8 +50,13 @@
             {% endif %}
           </div>
           {% endif %}
-          {% if x.data.info %}
+          {% if x.data.dimensions %}
           <div class="detail-meta">
+            {{ x.data.dimensions | markdown | safe }}
+          </div>
+          {% endif %}
+          {% if x.data.info %}
+          <div class="detail-info">
             {{ x.data.info | markdown | safe }}
           </div>
           {% endif %}
@@ -97,8 +102,8 @@
           // Narrow screens: panel sits below its image, so bring the image into view
           panel.previousElementSibling.scrollIntoView({ behavior: 'smooth', block: 'start' });
         } else {
-          // Open at the current scroll position; the panel then scrolls with the page
-          panel.style.top = 'calc(' + window.scrollY + 'px + 2em)';
+          // Wide screens: panel is fixed beside the grid; start its own scroll at the top
+          panel.scrollTop = 0;
         }
       }
       function panelForPath(path) {
