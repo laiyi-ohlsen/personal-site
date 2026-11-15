@@ -128,8 +128,13 @@ th:nth-child(2), td:nth-child(2) {
 }
 
 .project-detail {
-  position: absolute;
+  /* Stays in place while the grid scrolls; scrolls internally if taller than the window */
+  position: fixed;
   top: 2em;
+  max-height: calc(100vh - 2em);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
   left: calc(1.5em + 450px);
   right: 0;
   width: min(600px, calc(100vw - 450px - 7.5em));
@@ -193,6 +198,8 @@ th:nth-child(2), td:nth-child(2) {
     position: static;
     width: auto;
     max-width: none;
+    max-height: none;
+    overflow-y: visible;
     margin: 1.5em 0 2.5em 0;
     padding-bottom: 0;
   }
