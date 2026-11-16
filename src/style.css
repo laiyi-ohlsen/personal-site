@@ -158,6 +158,10 @@ th:nth-child(2), td:nth-child(2) {
   margin-bottom: 0.5em;
 }
 
+.project-detail .detail-video {
+  margin-bottom: 0.5em;
+}
+
 .project-detail .carousel-track img {
   margin: 0;
 }

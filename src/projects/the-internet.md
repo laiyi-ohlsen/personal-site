@@ -9,7 +9,7 @@ dimensions: "Ink on paper; 18\" x 24\""
 info: |
   Shown at Public Works Administration for the Year 8 New Inc Art + Code Track End of Year Show, organized by Celine Katzman & Rhizome.
 title: '"The Internet"'
-permalink: "drawing/{{ title | slugify }}/index.html"
+permalink: "{{ title | slugify }}/index.html"
 photo: "/assets/images/internet/internet_1.jpeg"
 photos:
   - src: "/assets/images/internet/internet_1.jpeg"

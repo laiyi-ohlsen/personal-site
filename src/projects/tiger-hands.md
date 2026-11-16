@@ -11,7 +11,7 @@ info: |
   Photos by [Erin Baiano](https://www.erinbaiano.com/)
 
 permalink: "{{ title | slugify }}/index.html"
-photo: "/assets/images/tiger_hands/tiger_hands_1.jpg"
+photo: "/assets/images/tiger_hands/tiger_hands_3.jpg"
 photos:
   - src: "/assets/images/tiger_hands/tiger_hands_1.jpg"
     alt: "Tiger Hands 1"

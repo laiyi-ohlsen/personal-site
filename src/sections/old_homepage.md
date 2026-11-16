@@ -20,7 +20,7 @@ Internet infrastructure, measurement, data, gaps in data, heliographs, mirrors, 
 
 ## Creative
 
-[Writing]({{ site.url }}/writing) | [Video]({{ site.url }}/video) | [Performance]({{ site.url }}/performance) | [Workshop]({{ site.url }}/workshop) | [Printed Matter]({{ site.url }}/printed-matter) | [Drawing]({{ site.url }}/drawing)
+[Writing + Talks]({{ site.url }}/writing-talks) | [Video]({{ site.url }}/video) | [Performance]({{ site.url }}/performance) | [Workshop]({{ site.url }}/workshop) | [Printed Matter]({{ site.url }}/printed-matter) | [Drawing]({{ site.url }}/drawing)
 
 ## Contact
 

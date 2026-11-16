@@ -13,5 +13,5 @@ description: |
 permalink: "{{ title | slugify }}/index.html"
 photo: "/assets/images/cofc/cofc.jpg"
 carousel: false
-year: 2019
+year: 2020
 ---

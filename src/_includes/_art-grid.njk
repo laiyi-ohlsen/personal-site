@@ -50,6 +50,11 @@
             {% endif %}
           </div>
           {% endif %}
+          {% if x.data.video %}
+          <div class="detail-video">
+            {{ x.data.video | safe }}
+          </div>
+          {% endif %}
           {% if x.data.dimensions %}
           <div class="detail-meta">
             {{ x.data.dimensions | markdown | safe }}

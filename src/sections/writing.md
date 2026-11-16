@@ -1,8 +1,8 @@
 ---
 layout: section.njk
-title: Writing
+title: Writing + Talks
 type: writing 
-permalink: "{{ type | slugify }}/index.html"
+permalink: "writing-talks/index.html"
 ---
 
 ## Essay
@@ -25,7 +25,18 @@ permalink: "{{ type | slugify }}/index.html"
 2026-05-05 | Internet Index
 
 
-
-
 *  ⪼ [Marguerite Hemmings](https://pioneerworks.org/broadcast/lai-yi-ohlsen-marguerite-hemmings-choreography-of-circulation) \
 2020-12-07 | Pioneer Works Broadcast
+
+## Talks + Panels
+
+_Recorded only. For full list, see Resume_. 
+
+*  ⪼ [From Earth to Sky](https://www.are.na/editorial/from-earth-to-sky) \
+2026-06-10 | Triple Canopy x are.na
+
+⪼ [Teaching Creative Technology in the Age of AI](https://youtu.be/QxCTG89oqWg?si=TUgLyyLBMZITCRoy) \
+2026-02-17 | Index Space
+
+*  ⪼ [Computational Design Practices Conversations with Practioners](https://youtu.be/dTzOaR3qWb0?si=C28I2sP3Z_bqXtmv) \
+2023-08-01 | Columbia GSAPP

@@ -16,7 +16,7 @@ module.exports = function(eleventyConfig) {
 			filenameFormat: function (id, src, width, format, options) {
 				const extension = path.extname(src)
 				const name = path.basename(src, extension)
-        const x = `${name}-${width}w.${format}`
+        const x = `${name}-${id}-${width}w.${format}`
 				return x
 			}
 		}
@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
 			filenameFormat: function (id, src, width, format, options) {
 				const extension = path.extname(src)
 				const name = path.basename(src, extension)
-				return `${name}-${width}w.${format}`
+				return `${name}-${id}-${width}w.${format}`
 			}
 		}
 		Image(srcPath, options)

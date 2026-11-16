@@ -62,6 +62,7 @@ This is a semi-complete list of things I do and have done.
 
 **Spring 2026**
 * ⪼   Advanced Critical Computation (Undergraduate) 
+* ⪼   Guest Lecturer at NYU Integrated Media Design
 
 **Fall 2025**
 * ⪼  Critical Computation Lab (Graduate)
@@ -70,6 +71,7 @@ This is a semi-complete list of things I do and have done.
 **Spring 2025**
 * ⪼   Statistics & Society (Undergraduate)
 * ⪼   Advanced Critical Computation (Undergraduate) 
+* ⪼   Guest Lecturer at Cooper Union Engineering 
 
 **Fall 2024**
 * ⪼  Critical Computation Lab (Graduate)
