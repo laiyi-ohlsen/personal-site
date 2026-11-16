@@ -11,6 +11,13 @@ body {
   margin-bottom: 2em;
 }
 
+@media (max-width: 900px) {
+  body {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
 /* ========== Layout Containers ========== */
 .container, .content { 
   max-width: 450px;
@@ -318,8 +325,8 @@ video, img {
     position: relative;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-top: 0.5em;
-    padding: 10px 6px;
+    margin: 0.5em -1em 0;
+    padding: 10px calc(1em - 5px);
     scrollbar-width: none;
   }
 

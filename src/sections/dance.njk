@@ -56,7 +56,7 @@ clips: 56
   }
 
   thumbs.forEach(function (b, i) {
-    b.addEventListener('click', function () { play(i); });
+    b.addEventListener('click', function () { unmute(); play(i); });
   });
   player.addEventListener('ended', function () { play(current + 1); });
   var toggle = document.getElementById('dance-toggle');
@@ -65,10 +65,25 @@ clips: 56
     toggle.innerHTML = player.paused ? '&#x25B6;&#xFE0E;' : '&#x23F8;&#xFE0E;';
     toggle.setAttribute('aria-label', player.paused ? 'Play' : 'Pause');
   }
-  document.getElementById('dance-screen').addEventListener('click', togglePlay);
-  toggle.addEventListener('click', togglePlay);
+  // Browsers only allow muted autoplay, so the first interaction turns the sound on.
+  function unmute() {
+    if (!player.muted) return false;
+    player.muted = false;
+    return true;
+  }
+  document.getElementById('dance-screen').addEventListener('click', function () {
+    if (unmute() && !player.paused) return;
+    togglePlay();
+  });
+  toggle.addEventListener('click', function () { unmute(); togglePlay(); });
   player.addEventListener('play', syncToggle);
   player.addEventListener('pause', syncToggle);
-  document.getElementById('dance-next').addEventListener('click', function () { play(current + 1); });
+  document.getElementById('dance-next').addEventListener('click', function () { unmute(); play(current + 1); });
+
+  var autoplay = player.play();
+  if (autoplay) autoplay.catch(function () {
+    player.muted = true;
+    player.play().catch(function () {});
+  });
 })();
 </script>
