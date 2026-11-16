@@ -218,6 +218,115 @@ video, img {
   padding-left: 0;
 }
 
+/* ========== Dance ========== */
+.dance-stage {
+  flex-direction: row;
+  align-items: center;
+}
+
+.dance-screen {
+  flex: 1 1 0;
+  min-width: 0;
+  height: calc(100vh - 4em);
+  cursor: pointer;
+}
+
+#dance-player {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+  object-position: right center;
+  margin: 0;
+  pointer-events: none;
+}
+
+.dance-controls {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+@media (max-width: 900px) {
+  .dance-stage {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dance-screen {
+    flex: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-height: 70vh;
+  }
+
+  #dance-player {
+    object-position: center;
+  }
+
+  .dance-controls {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+}
+
+.dance-controls button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.4em;
+  line-height: 1;
+  color: #000;
+  cursor: pointer;
+}
+
+.dance-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2em;
+}
+
+.dance-thumb {
+  width: 60px;
+  height: 60px;
+  box-sizing: content-box;
+  padding: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dance-thumb img {
+  transition: box-shadow 0.4s ease;
+}
+
+.dance-thumb.active img {
+  animation: dance-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes dance-glow {
+  0%, 100% { box-shadow: 0 0 6px 2px rgba(46, 111, 64, 0.6); }
+  50%      { box-shadow: 0 0 14px 5px rgba(46, 111, 64, 0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dance-thumb.active img {
+    animation: none;
+    box-shadow: 0 0 10px 4px rgba(46, 111, 64, 0.8);
+  }
+}
+
+.dance-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
 /* ========== Image Captions ========== */
 .caption {
   display: block;
