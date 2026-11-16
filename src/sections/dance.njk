@@ -2,7 +2,6 @@
 layout: section.njk
 title: Dance
 permalink: "dance/index.html"
-clips: 56
 ---
 
 <div class="project-detail dance-stage">
@@ -22,11 +21,9 @@ clips: 56
 </div>
 
 <div class="dance-grid">
-{%- for i in range(1, clips + 1) %}
-  {%- set n = ("0" + i) | string %}
-  {%- set n = n.slice(-2) %}
-  <button type="button" class="dance-thumb{% if i == 1 %} active{% endif %}" data-src="{{ media.url }}/videos/dance/dance-{{ n }}.mp4" data-poster="/assets/images/dance/dance-{{ n }}.png" aria-label="Play clip {{ i }}">
-    <img src="/assets/images/dance/dance-{{ n }}.png" alt="" width="60" height="60" loading="lazy">
+{%- for clip in danceClips %}
+  <button type="button" class="dance-thumb{% if loop.first %} active{% endif %}" data-src="{{ media.url }}/videos/dance/{{ clip }}.mp4" aria-label="Play clip {{ loop.index }}">
+    <img src="/assets/images/dance/{{ clip }}.png" alt="" width="60" height="60" loading="lazy">
   </button>
 {%- endfor %}
 </div>

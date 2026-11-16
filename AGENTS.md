@@ -6,4 +6,4 @@
   Reference them in templates as `{{ media.url }}/videos/...` (see `src/_data/media.js`: local `/assets` when serving, R2 URL in builds, override with `MEDIA_URL`).
   Upload new/changed videos with `scripts/upload-media.sh`.
 - Dance page: `src/sections/dance.njk`. Clips are `src/assets/videos/dance/dance-NN.mp4` with Quick Look thumbnails in
-  `src/assets/images/dance/dance-NN.png` (`qlmanage -t -s 160`); update `clips:` in the front matter when the count changes.
+  `src/assets/images/dance/dance-NN.png` (`qlmanage -t -s 160`). The clip list comes from the thumbnails (`src/_data/danceClips.js`): to remove a clip, delete its video, its thumbnail, and its R2 object.
