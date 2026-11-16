@@ -48,7 +48,11 @@ clips: 56
     var t = thumbs[current];
     thumbs.forEach(function (b) { b.classList.toggle('active', b === t); });
     player.src = t.dataset.src;
-    player.play();
+    var p = player.play();
+    if (p) p.catch(function () {});
+    if (grid.scrollWidth > grid.clientWidth) {
+      grid.scrollTo({ left: t.offsetLeft - (grid.clientWidth - t.offsetWidth) / 2, behavior: 'smooth' });
+    }
   }
 
   thumbs.forEach(function (b, i) {

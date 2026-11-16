@@ -248,31 +248,6 @@ video, img {
   gap: 0.75em;
 }
 
-@media (max-width: 900px) {
-  .dance-stage {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .dance-screen {
-    flex: none;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1;
-    max-height: 70vh;
-  }
-
-  #dance-player {
-    object-position: center;
-  }
-
-  .dance-controls {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1.5em;
-  }
-}
-
 .dance-controls button {
   background: none;
   border: none;
@@ -325,6 +300,54 @@ video, img {
   height: 100%;
   object-fit: cover;
   margin: 0;
+}
+
+@media (max-width: 900px) {
+  .dance-stage {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    margin: 1em 0 0;
+    padding: 0.5em 0;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dance-grid {
+    position: relative;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 0.5em;
+    padding: 10px 6px;
+    scrollbar-width: none;
+  }
+
+  .dance-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dance-thumb {
+    flex: none;
+  }
+
+  .dance-screen {
+    flex: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-height: 70vh;
+  }
+
+  #dance-player {
+    object-position: center;
+  }
+
+  .dance-controls {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
 }
 
 /* ========== Image Captions ========== */
