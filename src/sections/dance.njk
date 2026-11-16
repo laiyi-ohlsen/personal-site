@@ -12,6 +12,9 @@ clips: 56
   <div class="dance-controls">
     <button type="button" id="dance-toggle" aria-label="Play">&#x25B6;&#xFE0E;</button>
     <button type="button" id="dance-next" aria-label="Next clip">&#x23ED;&#xFE0E;</button>
+    <button type="button" id="dance-mute" aria-label="Unmute">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h4l5-4v14l-5-4H3z" fill="currentColor"/><g class="icon-off" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 9l5 6M21 9l-5 6"/></g><g class="icon-on" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15.5 9a4 4 0 0 1 0 6M18.5 6a8 8 0 0 1 0 12"/></g></svg>
+    </button>
   </div>
   <!-- <div class="detail-meta">
     <p>Click a thumbnail to play. Click the video to pause or resume.</p>
@@ -79,6 +82,15 @@ clips: 56
   player.addEventListener('play', syncToggle);
   player.addEventListener('pause', syncToggle);
   document.getElementById('dance-next').addEventListener('click', function () { unmute(); play(current + 1); });
+
+  var muteBtn = document.getElementById('dance-mute');
+  function syncMute() {
+    muteBtn.classList.toggle('is-muted', player.muted);
+    muteBtn.setAttribute('aria-label', player.muted ? 'Unmute' : 'Mute');
+  }
+  muteBtn.addEventListener('click', function () { player.muted = !player.muted; });
+  player.addEventListener('volumechange', syncMute);
+  syncMute();
 
   var autoplay = player.play();
   if (autoplay) autoplay.catch(function () {

@@ -265,6 +265,21 @@ video, img {
   cursor: pointer;
 }
 
+.dance-controls svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+#dance-mute .icon-off,
+#dance-mute.is-muted .icon-on {
+  display: none;
+}
+
+#dance-mute.is-muted .icon-off {
+  display: inline;
+}
+
 .dance-grid {
   display: flex;
   flex-wrap: wrap;
