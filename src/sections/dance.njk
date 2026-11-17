@@ -78,7 +78,11 @@ permalink: "dance/index.html"
   toggle.addEventListener('click', function () { unmute(); togglePlay(); });
   player.addEventListener('play', syncToggle);
   player.addEventListener('pause', syncToggle);
-  document.getElementById('dance-next').addEventListener('click', function () { unmute(); play(current + 1); });
+  document.getElementById('dance-next').addEventListener('click', function () {
+    unmute();
+    var next = Math.floor(Math.random() * (thumbs.length - 1));
+    play(next >= current ? next + 1 : next);
+  });
 
   var muteBtn = document.getElementById('dance-mute');
   function syncMute() {
