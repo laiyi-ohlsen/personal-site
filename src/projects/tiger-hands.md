@@ -6,7 +6,7 @@ medium: [performance]
 title: Tiger Hands
 description: "Dancer and collaborator in Benjamin Akio Kimitch’s [Tiger Hands](https://benjaminakio.com/), a “cosmic, sunrise-colored search for authentic personal expression, using elements of Peking opera as a transformative source of beauty and strength.”"
 info: |
-  Tiger  Hands premiered in August 2022 at [the Shed](https://laiyiohlsen.com/n-call-benjamin-akio-kimitch). In July 2026 it toured to Jacob's Pillow and Lincoln Center. 
+  Tiger  Hands premiered in August 2022 at [the Shed](https://www.theshed.org/program/186-open-call-benjamin-akio-kimitch). In July 2026 it toured to Jacob's Pillow and Lincoln Center. 
   
   Photos by [Erin Baiano](https://www.erinbaiano.com/)
 

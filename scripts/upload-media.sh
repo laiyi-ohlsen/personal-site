@@ -19,5 +19,5 @@ while read -r file <&3; do
     *) type="application/octet-stream" ;;
   esac
   echo "Uploading $file"
-  $WRANGLER r2 object put "$BUCKET/$file" --file "$file" --content-type "$type" --remote
+  $WRANGLER r2 object put "$BUCKET/$file" --file "$file" --content-type "$type" --cache-control "public, max-age=604800" --remote
 done 3< <(find videos -type f ! -name '.DS_Store' | sort)

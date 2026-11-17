@@ -16,12 +16,12 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^4.0.2"
+    "@11ty/eleventy-img": "^4.0.2",
+    "markdown-it": "13.0.2"
   },
   "dependencies": {
     "eleventy-plugin-clean": "^1.2.6",
     "jquery": "^3.7.1",
-    "lightbox2": "^2.11.5",
-    "lodash": "^4.17.21"
+    "lightbox2": "^2.11.5"
   }
 }

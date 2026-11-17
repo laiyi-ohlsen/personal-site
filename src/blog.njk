@@ -9,7 +9,7 @@ permalink: /blog/index.html
 {% for post in posts %}
 <a href="{{ post.url }}" class="post-preview">
   {% if post.data.thumbnail %}
-  <img class="post-thumbnail" src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+  <img class="post-thumbnail" sizes="180px" src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
   {% endif %}
   <div class="post-info">
     <span class="post-title">{{ post.data.title }}</span>

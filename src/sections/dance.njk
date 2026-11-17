@@ -23,7 +23,7 @@ permalink: "dance/index.html"
 <div class="dance-grid">
 {%- for clip in danceClips %}
   <button type="button" class="dance-thumb{% if loop.first %} active{% endif %}" data-src="{{ media.url }}/videos/dance/{{ clip }}.mp4" aria-label="Play clip {{ loop.index }}">
-    <img src="/assets/images/dance/{{ clip }}.png" alt="" width="60" height="60" loading="lazy">
+    <img src="/assets/images/dance/{{ clip }}.png" alt="" width="60" height="60" sizes="60px" loading="lazy">
   </button>
 {%- endfor %}
 </div>

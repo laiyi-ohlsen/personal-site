@@ -16,7 +16,7 @@
       <div class="project-item" data-mediums="{{ x.data.medium | join(',') }}">
         {% if x.data.photo %}
         <a href="{{ x.url }}" data-detail="detail-{{ x.data.title | slugify }}">
-          {% galleryImage x.data.photo, x.data.title %}
+          <img src="{{ x.data.photo }}" alt="{{ x.data.title }}" sizes="(max-width: 900px) 100vw, 450px">
         </a>
         {% endif %}
         <div class="project-title">{{ x.data.title }} ({{ x.data.year }})</div><br>
@@ -141,27 +141,6 @@
       if (initial && getComputedStyle(initial).position === 'static') {
         initial.previousElementSibling.scrollIntoView({ block: 'start' });
       }
-
-      // Carousels
-      document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
-        var track = carousel.querySelector('.carousel-track');
-        var images = track.querySelectorAll('img');
-        var prevBtn = carousel.querySelector('[data-prev]');
-        var nextBtn = carousel.querySelector('[data-next]');
-        var counter = carousel.querySelector('[data-current]');
-        var index = 0;
-        function update() {
-          track.style.transform = 'translateX(-' + (index * 100) + '%)';
-          if (counter) counter.textContent = index + 1;
-        }
-        if (prevBtn) prevBtn.addEventListener('click', function () {
-          index = (index - 1 + images.length) % images.length;
-          update();
-        });
-        if (nextBtn) nextBtn.addEventListener('click', function () {
-          index = (index + 1) % images.length;
-          update();
-        });
-      });
     })();
     </script>
+    {% include "_carousel-script.njk" %}
